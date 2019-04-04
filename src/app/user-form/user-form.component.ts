@@ -4,8 +4,7 @@ import { User }    from '../user';
 
 @Component({
   selector: 'app-user-form',
-  templateUrl: './user-form.component.html',
-  styleUrls: ['./user-form.component.css']
+  templateUrl: './user-form.component.html'
 })
 export class UserFormComponent {
 
