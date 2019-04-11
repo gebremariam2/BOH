@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-subtitle>
+    <h3>Email Validation Required</h3>
+  </mat-card-subtitle>
+
+  <mat-card-content>
+    <div>
+      Thank you for registering. Please validate your email address in order to continue.
+      If you need us to re-send the validation email, click the button below.
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="accent" type="submit" aria-label="Validate" (click)="verify()">
+      <mat-icon aria-hidden="true">email</mat-icon>
+      Re-send Validation
+    </button>
+  </mat-card-actions>
+</mat-card>

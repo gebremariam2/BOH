@@ -1,0 +1,23 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    Application Name
+
+    <span class="flexspacer"></span>
+
+    <button mat-stroked-button routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+      routerLink="/home">Home</button>
+    <ng-container *ngIf="isLoggedIn">
+      <button mat-stroked-button routerLinkActive="active" routerLink="/update">My Account</button>
+      <button mat-stroked-button routerLink="/login" (click)="logout()">Logout</button>
+    </ng-container>
+    <ng-container *ngIf="!isLoggedIn">
+      <button mat-stroked-button routerLinkActive="active" routerLink="/login">Login</button>
+    </ng-container>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
