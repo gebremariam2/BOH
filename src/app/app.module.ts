@@ -6,6 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserFormComponent } from './user-form/user-form.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+const config = {    apiKey: "AIzaSyAOivwmNprZq9amFjJUPAaS3L4Vrd0XJIs",
+authDomain: "bohv1-7446b.firebaseapp.com",
+databaseURL: "https://bohv1-7446b.firebaseio.com",
+projectId: "bohv1-7446b",
+storageBucket: "bohv1-7446b.appspot.com",
+messagingSenderId: "1008832006553"}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +25,10 @@ import { UserFormComponent } from './user-form/user-form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(config),
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
